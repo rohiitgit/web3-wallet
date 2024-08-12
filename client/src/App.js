@@ -13,7 +13,7 @@ function App() {
     setError('');
 
     try{
-      const response = await axios.post('/');
+      const response = await axios.post('http://localhost:5000');
       setMnemonics(response.data.mnemonic);
     } catch (err) {
       setError('Failed to generate mneumonics');

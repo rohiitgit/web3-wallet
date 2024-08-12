@@ -17,8 +17,13 @@ const wallets = {};
 // API to generate a new wallet
 
 app.post('/', (req, res) => {
-    const mnemonic = bip39.generateMnemonic();
-    res.json({ mnemonic });
+    try {
+        const mnemonic = bip39.generateMnemonic();
+        res.json({ mnemonic });
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Failed to generate mnemonic' });
+      }
     // const seed = bip39.mnemonicToSeedSync(mnemonic).toString('hex');
 
     // function createSolWallet() {
