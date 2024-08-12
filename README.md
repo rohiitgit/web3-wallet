@@ -11,7 +11,7 @@ cd web3-wallet
 start frontend - 
 ```
 cd client
-npm init
+npm i
 npm start
 ```
 
