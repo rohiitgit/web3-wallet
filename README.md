@@ -11,11 +11,13 @@ cd web3-wallet
 start frontend - 
 ```
 cd client
+npm init
 npm start
 ```
 
 start server side -
 ```
 cd server
+npm i express bip39 cors
 node ./src/index.js
 ```
